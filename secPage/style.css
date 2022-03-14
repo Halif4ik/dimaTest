@@ -1,0 +1,116 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.h2{
+  color: #0000bf;
+}
+header {
+  display: flex;
+  font-size: 30px;
+  color: #1abc9c;
+  flex-flow: column-reverse wrap-reverse;
+  align-content: space-around;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+
+.page{
+  display: flex;
+  /*перенос блоков если не лезет в строку*/
+  flex-wrap: wrap;
+  /*заполнение блока семитрично 3-мя колонками*/
+  flex-direction: column;
+  background-color: #A0EBDC;
+  padding: 5px;
+  font-family: 'Oxygen', sans-serif;
+}
+
+
+.form {
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+ }
+
+.form_head{
+  color: #2b2b2b;
+  cursor: pointer;
+  transition: background .2s ease-out;
+  font-size: 17px;
+}
+.form_head:hover{
+  background-color: #e74c3c;
+  color: bisque;
+}
+.form_head_input:checked + .form_wrapper{
+  display: block;
+}
+.form_wrapper{
+  display: none;
+}
+.form_head_input{
+  width: 0;
+  height: 0;
+-webkit-appearance: none;
+position: absolute;
+}
+
+.button{
+  color: white;
+  width: 20px;
+  height: 40px;
+  font-size: 20px;
+  border:white solid 2px;
+  border-radius: 5px;
+  background: #1abc9c;
+  min-width: 150px;
+  text-decoration: none;
+  text-align-all: center;
+}
+.button:hover{
+  background: red;
+}
+
+.chessDesk {
+  display: flex;
+  margin: 0;
+  color: red;
+  flex-flow :column-reverse wrap-reverse;
+  align-content: center;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.blackSq{
+  background-color: #2b2b2b;
+  width: 20px;
+  height: 20px;
+}
+
+.whiteSq{
+  background-color: #FFFFFF;
+  width: 20px;
+  height: 20px;
+}
+.whiteLine{
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+
+
+
+
+
