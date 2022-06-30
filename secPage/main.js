@@ -1,3 +1,21 @@
+/*window.postMessage('showAdocirFreeShippingBar!');
+window.addEventListener('message', (event) => {
+    console.log('event.origin - ', event.origin);
+    if (event.origin.indexOf('showAdocirFreeShippingBar') != -1 ) {
+        console.log('showAdocirFreeShippingBar must show!')
+    }
+}, false)*/
+
+document.body.addEventListener('click', () => {
+    console.log('34343');
+    var parentWindow = window.parent;
+    parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
+
+    let msg = 'Redy????';
+    window.postMessage('showAdocirFreeShippingBar!');
+
+});
+
 /*
 1. Дана форма с двумя числовыми инпутами.
    Посчитать сумму чисел в промежутке между введеными пользователем (например от -100 до 100),
@@ -21,9 +39,7 @@ document.getElementById("btn1").addEventListener('click', () => {
 
     document.getElementById('result1').innerText = result.toString();
 });
-
 /*2. User put time in sec result output in hh:ss.*/
-
 document.getElementById("btn2_1").addEventListener('click', () => {
 
     let timeInSecond = parseInt(document.getElementById('seconds').value);
@@ -55,7 +71,6 @@ document.getElementById("btn2_2").addEventListener('click', () => {
 
     return document.getElementById('result2_2').innerText = hhMmSs(parsTime);
 });
-
 /*3. User put time in input[type=datetime-local] output instring  2 year(s), 1 month(s),
 3 day(s), 5 hour(s), 10 minute(s), 15 second(s).*/
 document.getElementById("btn3").addEventListener('click', () => {

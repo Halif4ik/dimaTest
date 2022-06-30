@@ -7,6 +7,23 @@
 })();*/
 
 (function () {
+   /* let iframe = document.querySelector('#secPage');
+    iframe.contentWindow.postMessage("NewMasege????", "http://localhost:63342");*/
+
+    window.addEventListener("message", listener);
+
+    function listener(event) {
+        var task = event.data['mess']
+
+        console.log('task',task);
+
+        console.log("eventOrigin: ", event.origin);
+        console.log("получено:[1] " + event.data);
+    }
+})();
+
+(function () {
+
     var DOC_KEY = '1N3bg7lhfpiQk8e8MLmNekjZTxJlhHXbEfdvC12Vrn-Y';
     var API_KEY = 'AIzaSyD3CXiYc3BUNDv4MZIbM1ehjzfHPloIbvo';
     var SHEET_PAGE = 'Sheet1';
