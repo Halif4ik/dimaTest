@@ -8,7 +8,7 @@
 
 (function () {
    let iframe = document.querySelector('#secPage');
-    iframe.contentWindow.postMessage({task:"NewMas ege????"},'http://localhost:63343' );
+    iframe.contentWindow.postMessage({task:"NewMas ege????"},'https://halif4ik.github.io' );
 
     window.addEventListener("message", listener);
     function listener(event) {
