@@ -7,9 +7,17 @@ window.addEventListener('message', (event) => {
 }, false)*/
 
 window.addEventListener("message", (event) => {
-    console.log('message!');
+    console.log('iframe!');
+
+
+    let task = event.data['task'];
+    console.log('vIframe', task);
 
     let msg = {'task': "dataH"};
+    console.log("eventOrigin:iFRAME-", event.origin);
+    console.log("event.data-iFRAME-" + event.data);
+
+
     event.source.postMessage(msg, event.origin);
 }, {once: true});
 
@@ -20,10 +28,19 @@ document.body.addEventListener('click', () => {
     var parentWindow = window.parent;
     parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
 
-    let msg = 'Redy????';
-    window.postMessage('showAdocirFreeShippingBar!');
+   /* let msg = 'Redy????';
+    window.postMessage('showAdocirFreeShippingBar!');*/
 
 });
+
+
+
+
+
+
+
+
+
 
 /*
 1. Дана форма с двумя числовыми инпутами.

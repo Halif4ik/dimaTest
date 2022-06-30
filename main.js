@@ -8,16 +8,16 @@
 
 (function () {
    let iframe = document.querySelector('#secPage');
-    iframe.contentWindow.postMessage("NewMasege????", "http://localhost:63342");
+    iframe.contentWindow.postMessage({task:"NewMas ege????"},'http://localhost:63343' );
 
     window.addEventListener("message", listener);
     function listener(event) {
-        var task = event.data['task']
+        var task = event.data['task'];
 
         console.log('task--',task);
 
-        console.log("eventOrigin:-", event.origin);
-        console.log("event.data-" + event.data);
+        console.log("eventOrigin:MAIN-", event.origin);
+        console.log("event.dataMAIN-" + event.data);
     }
 })();
 
