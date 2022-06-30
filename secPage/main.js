@@ -5,9 +5,17 @@ window.addEventListener('message', (event) => {
         console.log('showAdocirFreeShippingBar must show!')
     }
 }, false)*/
+window.addEventListener("message", (event) => {
+    console.log('message!');
+
+    let msg ={'task': "dataH"};
+    event.source.postMessage(msg,event.origin);
+});
+
 
 document.body.addEventListener('click', () => {
-    console.log('34343');
+    console.log('click!');
+
     var parentWindow = window.parent;
     parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
 
