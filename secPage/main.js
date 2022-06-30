@@ -1,36 +1,20 @@
-/*window.postMessage('showAdocirFreeShippingBar!');
-window.addEventListener('message', (event) => {
-    console.log('event.origin - ', event.origin);
-    if (event.origin.indexOf('showAdocirFreeShippingBar') != -1 ) {
-        console.log('showAdocirFreeShippingBar must show!')
-    }
-}, false)*/
-
 window.addEventListener("message", (event) => {
-    console.log('iframe!');
-
-
     let task = event.data['task'];
-    console.log('vIframe', task);
-
     let msg = {'task': "dataH"};
-    console.log("eventOrigin:iFRAME-", event.origin);
-    console.log("event.data-iFRAME-" + event.data);
 
+    console.log('task--', task);
+    console.log("event.dataSECOND-" + event.data);
 
     event.source.postMessage(msg, event.origin);
 }, {once: true});
 
 
-document.body.addEventListener('click', () => {
+document.body.addEventListener('click', (e) => {
+    var parentWindow = window.parent;
     console.log('click!');
 
-    var parentWindow = window.parent;
+    parentWindow.postMessage('showAdocirFreeShippingBar!',e.origin);
     parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
-
-   /* let msg = 'Redy????';
-    window.postMessage('showAdocirFreeShippingBar!');*/
-
 });
 
 

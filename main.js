@@ -7,16 +7,19 @@
 })();*/
 
 (function () {
-   let iframe = document.querySelector('#secPage');
-    iframe.contentWindow.postMessage({task:"NewMas ege????"},'https://halif4ik.github.io' );
+    let iframe = document.querySelector('#secPage');
+    iframe.contentWindow.postMessage({task: "NewMas ege????"}, '*');
+
 
     window.addEventListener("message", listener);
     function listener(event) {
+        console.log('event.origin - ', event.origin);
+        if (event.origin.indexOf('showAdocirFreeShippingBar') != -1 ) {
+            console.log('showAdocirFreeShippingBar must show!')
+        }
+
         var task = event.data['task'];
-
-        console.log('task--',task);
-
-        console.log("eventOrigin:MAIN-", event.origin);
+        console.log('task--', task);
         console.log("event.dataMAIN-" + event.data);
     }
 })();
