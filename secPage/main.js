@@ -5,12 +5,13 @@ window.addEventListener('message', (event) => {
         console.log('showAdocirFreeShippingBar must show!')
     }
 }, false)*/
+
 window.addEventListener("message", (event) => {
     console.log('message!');
 
-    let msg ={'task': "dataH"};
-    event.source.postMessage(msg,event.origin);
-});
+    let msg = {'task': "dataH"};
+    event.source.postMessage(msg, event.origin);
+}, {once: true});
 
 
 document.body.addEventListener('click', () => {
