@@ -12,24 +12,29 @@
     (function (a, d, o, r, i, c, u, p, w, m) {
             m = d.getElementsByTagName(o)[0], a[c] = a[c]
                 || {}, a[c].trigger = a[c].trigger || function () {
-                (a[c].trigger.arg = a[c].trigger.arg || []).push(arguments)},
-                a[c].on = a[c].on || function () {(a[c].on.arg = a[c].on.arg || []).push(arguments)},
-                a[c].off = a[c].off || function () {(a[c].off.arg = a[c].off.arg || []).push(arguments)
+                (a[c].trigger.arg = a[c].trigger.arg || []).push(arguments)
+            },
+                a[c].on = a[c].on || function () {
+                    (a[c].on.arg = a[c].on.arg || []).push(arguments)
+                },
+                a[c].off = a[c].off || function () {
+                    (a[c].off.arg = a[c].off.arg || []).push(arguments)
                 }, w = d.createElement(o), w.id = i, w.src = r, w.async = 1, w.setAttribute(p, u),
-                m.parentNode.insertBefore(w, m), w = null}
-    )(window, document, "script", "https://30011182.adoric-om.com/adoric.js", "Adoric_Script", "adoric","87dd43dde0f5cbb5875f5c4c716c6936", "data-key");
+                m.parentNode.insertBefore(w, m), w = null
+        }
+    )(window, document, "script", "https://30011182.adoric-om.com/adoric.js", "Adoric_Script", "adoric", "87dd43dde0f5cbb5875f5c4c716c6936", "data-key");
 </script>
 
 <body>
 <header>
-    <h2 style ="color:red;"> Warm Up</h2>
+    <h2 style="color:red;"> Warm Up</h2>
     <a href="https://halif4ik.github.io/dimaTest/" class="button">Рrevious page</a>
-    </header>
+</header>
 
 <section class="page">
     <!--TASK 1 Sum numbers ends 2,3,7 -->
     <form class="form">
-        <label class="form_head" for="radio"> 1. Дана форма с двумя числовыми инпутами.
+        <label class="form_head forward-button-container" for="radio"> 1. Дана форма с двумя числовыми инпутами.
             Посчитать сумму чисел в промежутке между введеными пользователем (например от 1 до 7),
             суммируя только числа которые заканчиваются на 2,3, и 7</label>
         <input class="form_head_input" type="radio" id="radio">
@@ -42,7 +47,7 @@
     </form>
     <!--TASK 2 Date -->
     <form class="form">
-        <label class="form_head" for="radioTask2">2) Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss
+        <label class="form_head question-footer-wrapper" for="radioTask2">2) Пользователь вводит время в секундах. Вывести в формате: hh:mm:ss
             (01:05:20). Ниже наоборот: пользователь вводит время в формате hh:mm:ss,
             вывести количество секунд.</label>
         <input class="form_head_input" type="radio" id="radioTask2">
@@ -84,8 +89,10 @@
     </form>
     <!--TASK 5 RegEx -->
     <form class="form">
-        <label class="form_head" for="radioTask5">5)  Дан некий textarea, в который пользователь вводит ссылки или ip
-            через запятую. Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не ссылки и не ip), и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не показывать, при клике на ссылку открывается новое окно).</label>
+        <label class="form_head" for="radioTask5">5) Дан некий textarea, в который пользователь вводит ссылки или ip
+            через запятую. Когда textarea станет неактивным - проверить введены ли ссылки/ip, удалить дичь (то что не
+            ссылки и не ip), и вывести их отсортированным по алфавиту списком ссылок (Пользователю http:// и https:// не
+            показывать, при клике на ссылку открывается новое окно).</label>
         <input class="form_head_input" type="radio" id="radioTask5">
         <textarea placeholder="Enter you links" class="inputs" rows="5"></textarea>
     </form>

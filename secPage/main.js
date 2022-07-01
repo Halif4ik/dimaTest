@@ -1,11 +1,8 @@
-
+/*
 window.addEventListener("message", (event) => {
     console.log('event.dataSECOND--', event.data);
-    /*console.log('inMessage-',event.origin);*/
-
     window.parent.postMessage({'task': "JSON.stringify(window)"}, event.origin);
 });
-
 
 document.body.addEventListener('click', (e) => {
     var parentWindow = window.parent;
@@ -14,15 +11,27 @@ document.body.addEventListener('click', (e) => {
     parentWindow.postMessage('showAdocirFreeShippingBar!','*');
 
      parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
-});
+});*/
 
+(function () {
+    document.body.addEventListener("click", () => {
+        const progressBar = document.querySelector('[role="progressbar"]');
+        if (!progressBar) return;
+        const currentStep = progressBar.getAttribute('aria-valuenow');
+        const finish = progressBar.getAttribute('aria-valuemax');
 
+        /*if user in last step*/
+        if ((finish - currentStep) === 1) {
+            document.body.addEventListener("click", (event) => {
+                if (event.target.closest('.forward-button-container') || event.target.closest('.question-footer-wrapper')) {
+                    console.log('?!Startcampaign');
+                    parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
+                }
+            });
 
-
-
-
-
-
+        }
+    });
+})();
 
 
 /*

@@ -10,21 +10,21 @@ class="forward-button-container"
 class="question-footer-wrapper"
 */
 /*  let test = document.querySelector('#Layer_1');
-   console.log(test.getAttribute('version'));*/
+  console.log(test.getAttribute('version'));*/
 
 (function () {
+
     let iframe = document.querySelector('#secPage');
     iframe.contentWindow.postMessage({task: "NewMas ege????"}, '*');
 
-
     window.addEventListener("message", listener);
     function listener(event) {
-        if (event.data.toString().indexOf('showAdocirFreeShippingBar') != -1 ) {
+        if (event.data.toString().indexOf('showAdocirFreeShippingBar') != -1) {
             console.log('event.origin - ', event.origin);
             console.log('together show must show!')
         }
 
-        if (event.data['task']){
+        if (event.data['task']) {
             console.log("event.dataMAIN-");
             console.log(event.data);
         }
