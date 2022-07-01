@@ -19,12 +19,10 @@ document.body.addEventListener('click', (e) => {
         if (!progressBar) return;
         const currentStep = progressBar.getAttribute('aria-valuenow');
         const finish = progressBar.getAttribute('aria-valuemax');
-        console.log('currentStep');
         if ((finish - currentStep) === 1) {
             document.body.addEventListener("click", (event) => {
                 if (event.target.closest('.forward-button-container') || event.target.closest('.question-footer-wrapper')) {
-                    console.log('?!Startcampaign');
-                    window.parent.adoric && window.parent.adoric.trigger('show_spin_2_Win');
+                    window.parent.adoric && window.parent.adoric.trigger('coupon_Test_P&G_Turkey');
                 }
             });
 
