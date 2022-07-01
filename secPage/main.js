@@ -13,7 +13,7 @@ document.body.addEventListener('click', (e) => {
 
     parentWindow.postMessage('showAdocirFreeShippingBar!','*');
 
-    /* parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');*/
+     parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
 });
 
 
