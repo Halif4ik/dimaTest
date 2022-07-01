@@ -13,15 +13,16 @@ class="question-footer-wrapper"
   console.log(test.getAttribute('version'));*/
 
 (function () {
-
-    let iframe = document.querySelector('#secPage');
-    iframe.contentWindow.postMessage({task: "NewMas ege????"}, '*');
+  /*  let iframe = document.querySelector('#secPage');
+    iframe.contentWindow.postMessage({task: "NewMas ege????"}, '*');*/
 
     window.addEventListener("message", listener);
     function listener(event) {
-        if (event.data.toString().indexOf('showAdocirFreeShippingBar') != -1) {
+        const msg = event.data.toString();
+        if (msg.indexOf('coupon_Test_P&G_Turkey') != -1) {
             console.log('event.origin - ', event.origin);
-            console.log('together show must show!')
+            console.log('Delivered-' + msg);
+            window.adoric.trigger(msg);
         }
 
         if (event.data['task']) {

@@ -8,10 +8,10 @@ document.body.addEventListener('click', (e) => {
     var parentWindow = window.parent;
     console.log('click!');
 
-    parentWindow.postMessage('showAdocirFreeShippingBar!','*');
+    parentWindow.postMessage('coupon_Test_P&G_Turkey','*');
 
-     parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
 });*/
+
 
 (function () {
     document.body.addEventListener("click", () => {
@@ -22,6 +22,7 @@ document.body.addEventListener('click', (e) => {
         if ((finish - currentStep) === 1) {
             document.body.addEventListener("click", (event) => {
                 if (event.target.closest('.forward-button-container') || event.target.closest('.question-footer-wrapper')) {
+                    window.parent.postMessage('coupon_Test_P&G_Turkey','*');
                     window.parent.adoric && window.parent.adoric.trigger('coupon_Test_P&G_Turkey');
                 }
             });
@@ -29,6 +30,9 @@ document.body.addEventListener('click', (e) => {
         }
     });
 })();
+
+
+
 
 
 /*
