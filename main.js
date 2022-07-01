@@ -20,15 +20,15 @@ class="question-footer-wrapper"
     function listener(event) {
         const msg = event.data.toString();
         if (msg.indexOf('coupon_Test_P&G_Turkey') != -1) {
-            console.log('event.origin - ', event.origin);
+          /*  console.log('event.origin - ', event.origin);*/
             console.log('Delivered-' + msg);
             window.adoric.trigger(msg);
         }
 
-        if (event.data['task']) {
+       /* if (event.data['task']) {
             console.log("event.dataMAIN-");
             console.log(event.data);
-        }
+        }*/
     }
 })();
 

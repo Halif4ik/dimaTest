@@ -23,7 +23,7 @@ document.body.addEventListener('click', (e) => {
             document.body.addEventListener("click", (event) => {
                 if (event.target.closest('.forward-button-container') || event.target.closest('.question-footer-wrapper')) {
                     window.parent.postMessage('coupon_Test_P&G_Turkey','*');
-                    window.parent.adoric && window.parent.adoric.trigger('coupon_Test_P&G_Turkey');
+                  /*  window.parent.adoric && window.parent.adoric.trigger('coupon_Test_P&G_Turkey');*/
                 }
             });
 
