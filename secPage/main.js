@@ -1,20 +1,19 @@
+
 window.addEventListener("message", (event) => {
-    let task = event.data['task'];
-    let msg = {'task': "dataH"};
+    console.log('event.dataSECOND--', event.data);
+    /*console.log('inMessage-',event.origin);*/
 
-    console.log('task--', task);
-    console.log("event.dataSECOND-" + event.data);
-
-    event.source.postMessage(msg, event.origin);
-}, {once: true});
+    window.parent.postMessage({'task': "JSON.stringify(window)"}, event.origin);
+});
 
 
 document.body.addEventListener('click', (e) => {
     var parentWindow = window.parent;
     console.log('click!');
 
-    parentWindow.postMessage('showAdocirFreeShippingBar!',e.origin);
-    parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');
+    parentWindow.postMessage('showAdocirFreeShippingBar!','*');
+
+    /* parentWindow.adoric && parentWindow.adoric.trigger('show_spin_2_Win');*/
 });
 
 
