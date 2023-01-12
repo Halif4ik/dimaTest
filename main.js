@@ -42,9 +42,10 @@ class="question-footer-wrapper"
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open("GET", URL, true);
+   /* xhr.open("GET", URL, true);
     xhr.responseType = 'json';
-    xhr.send();
+    xhr.send();*/
+
     /*console.log(self);*/
 
     /*put new bunner in tree html position prepend  pastete inside and in begin*/
