@@ -35,16 +35,17 @@ class="question-footer-wrapper"
 (function () {
 
     var DOC_KEY = '1N3bg7lhfpiQk8e8MLmNekjZTxJlhHXbEfdvC12Vrn-Y';
-    var API_KEY = 'AIzaSyD3CXiYc3BUNDv4MZIbM1ehjzfHPloIbvo';
+    var API_KEY = 'AIzaSyDB7Mk0_X06DqZHWlllSOont--5XAZ4tao';
     var SHEET_PAGE = 'Sheet1';
     var SHEET_SCOPE = '!A2:B10';
     var URL = "https://sheets.googleapis.com/v4/spreadsheets/" + DOC_KEY + "/values/" + SHEET_PAGE + SHEET_SCOPE + "?key=" + API_KEY;
 
     var xhr = new XMLHttpRequest();
 
-    xhr.open("GET", URL, true);
+   /* xhr.open("GET", URL, true);
     xhr.responseType = 'json';
-    xhr.send();
+    xhr.send();*/
+
     /*console.log(self);*/
 
     /*put new bunner in tree html position prepend  pastete inside and in begin*/
