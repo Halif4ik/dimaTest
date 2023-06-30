@@ -17,13 +17,15 @@
     document.addEventListener('click', function (event) {
         const buttonClose = event.target.closest('.button.close-adoric');
         const textClose = event.target.closest('.element-text:not(.inImage)');
-        console.log('buttonClose-', buttonClose);
+
         textClose && buttonClose && adoric && adoric.lightboxes.forEach(function (item) {
             console.log('item-', item);
             item.close(4);
         });
+
         if (buttonClose) {
             buttonClose.style.setProperty('visibility', 'hidden');
+            console.log('IF-', buttonClose.style.visibility);
         }
     });
 
