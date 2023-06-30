@@ -25,7 +25,6 @@
 
         if (buttonClose) {
             buttonClose.style.setProperty('visibility', 'hidden');
-            console.log('IF-', buttonClose.style.visibility);
         }
     });
 
@@ -73,12 +72,11 @@
                 if (indexSeparator !== -1) {
                     const firstPart = description.slice(0, indexSeparator + 1);
                     const otherText = description.slice(indexSeparator + 1);
-                    console.log('spanTextOnBanner-', spanTextOnBanner);
                     spanTextOnBanner.innerHTML = "<b>" + firstPart + "</b>" + otherText;
                 } else {
                     spanTextOnBanner.textContent = description;
                 }
-            }, 2000)
+            }, 1000)
         }
     }
 
