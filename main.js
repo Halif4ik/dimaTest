@@ -61,15 +61,15 @@
             /*select divs in part DOM our company,because in company we add unique name class in div with teg a,
              what we will change by new contents */
             const allHrefOnBanner = document.querySelectorAll('.element-text:not(.inImage) A');
-            const spanTextOnBanner = document.querySelector('.element-text:not(.inImage) span');
+
             /*approve present div in DOM adn change links*/
             allHrefOnBanner.forEach(function (oneHref) {
                 oneHref.href = link;
             });
-
             /*if present spliter we add teg <b> in first part text description*/
             const indexSeparator = description.indexOf(":");
             setTimeout(function () {
+                const spanTextOnBanner = document.querySelector('.element-text:not(.inImage) span');
                 if (indexSeparator !== -1) {
                     const firstPart = description.slice(0, indexSeparator + 1);
                     const otherText = description.slice(indexSeparator + 1);
@@ -78,7 +78,7 @@
                 } else {
                     spanTextOnBanner.textContent = description;
                 }
-            }, 4000)
+            }, 2000)
         }
     }
 
