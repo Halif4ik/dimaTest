@@ -18,7 +18,7 @@
         const buttonClose = event.target.closest('.button.close-adoric');
         const textClose = event.target.closest('.element-text:not(.inImage)');
 
-        textClose && buttonClose && adoric && adoric.lightboxes.forEach(function (item) {
+        textClose || buttonClose && adoric && adoric.lightboxes.forEach(function (item) {
             console.log('item-', item);
             item.close(4);
         });
