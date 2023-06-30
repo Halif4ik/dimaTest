@@ -78,7 +78,7 @@
                 } else {
                     spanTextOnBanner.textContent = description;
                 }
-            }, 2000)
+            }, 4000)
         }
     }
 
