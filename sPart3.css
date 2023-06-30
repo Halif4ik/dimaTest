@@ -154,6 +154,14 @@ form input, textarea {
     width: 100%;
 
 }
+.close-adoric{
+    position: fixed;
+    width: 153px;
+    height: 81px;
+    top: 93vh;
+    left: 15px;
+    background: red;
+}
 
 
 
