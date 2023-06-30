@@ -161,6 +161,7 @@ form input, textarea {
     top: 93vh;
     left: 15px;
     background: red;
+    z-index: 2147483647;
 }
 
 
