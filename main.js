@@ -14,12 +14,16 @@
 /*Close adoric campaign*/
 (function () {
     document.addEventListener('click', function (event) {
-        const buttonClose = event.target.closest('.button.close-adoric') || event.target.closest('.element-text:not(.inImage)');
+        const buttonClose = event.target.closest('.button.close-adoric');
+        const textClose = event.target.closest('.element-text:not(.inImage)');
         console.log('buttonClose-', buttonClose);
-        buttonClose && adoric && adoric.lightboxes.forEach(function (item) {
+        textClose && buttonClose && adoric && adoric.lightboxes.forEach(function (item) {
             console.log('item-', item);
             item.close(4);
         });
+        if (buttonClose) {
+            buttonClose.style.setProperty('visibility', 'hidden');
+        }
     });
 })();
 
