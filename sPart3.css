@@ -156,10 +156,10 @@ form input, textarea {
 }
 .close-adoric{
     position: fixed;
-    width: 335px;
+    width: 205px;
     height: 81px;
     top: 93vh;
-    left: 130px;
+    left: 20px;
     background: red;
     z-index: 2147483647;
     transition: all 0.5s ease-in-out 0s;
