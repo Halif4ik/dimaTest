@@ -1,4 +1,4 @@
-(function () {
+/*(function () {
     let iframe = document.querySelector('#secPage');
     iframe.contentWindow.postMessage({task: "NewMas ege????"}, '*');
 
@@ -10,7 +10,7 @@
             window.adoric.trigger(msg);
         }
     });
-})();
+})();*/
 
 (function () {
     /*Close adoric campaign*/
